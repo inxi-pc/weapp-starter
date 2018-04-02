@@ -1,0 +1,19 @@
+<import src="/dependency/zanui-weapp/loadmore/index.wxml" />
+<view class="container">
+  <action-sheet hidden="{{featureOptionHidden}}" bindchange="changeFeatures">
+    <block wx:for="{{featuresOptions}}">
+      <action-sheet-item class="item" bindtap="chooseFeature" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">Cancel</action-sheet-cancel>
+  </action-sheet>
+  <scroll-view class='section photos' style="height: 750px;" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="showFeatureOptions">
+    <view class="photo-list">
+      <block wx:for="{{photos}}">
+        <view class="photo-item" id="{{item.id}}" catchtap="lookPhoto">
+          <image class="photo" src="{{item.images[0].url}}"></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <template is="zan-loadmore" data="{{ loading: true }}" />
+</view>

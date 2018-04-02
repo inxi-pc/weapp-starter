@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/gallery/index",
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,13 +10,15 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "Index"
-    }, 
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "Log"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/gallery/index",
+        "text": "Gallery"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text": "Search"
+      }
+    ]
   }
 }

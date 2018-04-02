@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import "dependency/zanui-weapp/dist/index.wxss";
+@import "dependency/zanui-weapp/index.wxss";
 
 .container {
   height: 100%;

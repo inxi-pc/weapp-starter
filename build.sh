@@ -3,4 +3,8 @@
 destination='./dependency';
 source='./node_modules';
 
-cp -R $source/zanui-weapp/dist $destination/zanui-weapp/
+npm install
+
+mkdir -p $destination
+
+cp -R $source/zanui-weapp/dist/ $destination/zanui-weapp/
