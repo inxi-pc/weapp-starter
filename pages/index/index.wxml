@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<import src="../../dependency/zanui-weapp/dist/field/index.wxml" />
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+ <view class="zan-panel-title field__title--radius">Search:</view>
+  <view class="zan-panel">
+    <template
+      is="zan-field"
+      data="{{ ...config.radius.totalPrice }}"></template>
+  </view>
+</view>
