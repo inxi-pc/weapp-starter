@@ -8,12 +8,13 @@
   </action-sheet>
   <scroll-view class='section photos' style="height: 750px;" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="showFeatureOptions">
     <view class="photo-list">
-      <block wx:for="{{photos}}">
+      <block wx:key="item.id" wx:for="{{photos}}">
         <view class="photo-item" id="{{item.id}}" catchtap="lookPhoto">
           <image class="photo" src="{{item.images[0].url}}"></image>
         </view>
       </block>
     </view>
   </scroll-view>
-  <template is="zan-loadmore" data="{{ loading: true }}" />
 </view>
+
+<template is="zan-loadmore" data="{{ loading: loading }}" />

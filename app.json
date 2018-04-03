@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weapp Starter",
+    "navigationBarTitleText": "Garden",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

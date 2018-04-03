@@ -36,6 +36,7 @@ Page({
   },
   chooseFeature: function (e) {
     console.log(featureMap[e.currentTarget.dataset.name]);
+    this.changeFeatures(e);
     this.setData({
       feature: featureMap[e.currentTarget.dataset.name],
       rpp: 20
@@ -63,7 +64,10 @@ Page({
   },
   fetchData: function () {
     var that = this;
-
+    
+    this.setData({
+      loading: true
+    });
     var theRPP = that.data.rpp;
     console.log(theRPP);
     wx.request({
@@ -114,5 +118,11 @@ Page({
   onLoad: function () {
     console.log('load explore');
     this.initData(this.data.feature);
+  },
+  loadMore: function () {
+    console.log('load more');
+    if (this.data.hasMore) {
+      this.fetchData();
+    }
   }
 })
