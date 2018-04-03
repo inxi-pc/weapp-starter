@@ -1,3 +1,7 @@
+.container {
+    align-items:flex-start;
+}
+
 .photo-list{
   width:100%;
   display:flex;

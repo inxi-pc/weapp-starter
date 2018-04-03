@@ -120,8 +120,8 @@ Page({
     this.initData(this.data.feature);
   },
   loadMore: function () {
-    console.log('load more');
-    if (this.data.hasMore) {
+    if (this.data.hasMore && !this.data.loading) {
+      console.log('load more');
       this.fetchData();
     }
   }
