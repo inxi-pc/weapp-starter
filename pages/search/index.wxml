@@ -10,10 +10,10 @@
     </block>
   </view>
 
- <view class="zan-panel-title field__title--radius">Search:</view>
+ <!-- <view class="zan-panel-title field__title--radius">Search:</view> -->
   <view class="zan-panel">
-    <template
-      is="zan-field"
-      data=""></template>
+  <template
+    is="zan-field"
+    data="{{ mode: 'wrapped', title: 'Search: ', inputType: 'string', placeholder: 'Everything'}}"></template>
   </view>
 </view>

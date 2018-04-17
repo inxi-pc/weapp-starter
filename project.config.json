@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.94",
+	"libVersion": "2.0.0",
 	"appid": "wx9c044611db6b9d1d",
 	"projectname": "weapp-starter",
 	"isGameTourist": false,
